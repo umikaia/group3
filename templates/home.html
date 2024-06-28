@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Football Jersey Store</title>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+<body class="store-background">
+    <div class="container">
+        <div class="banner">
+            <div>
+                <h1>Welcome to Football Jersey Store</h1>
+                <a href="/store" class="cta-button">Shop Now</a>
+            </div>
+        </div>
+    
+        <div class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product">
+                <img src="../static/GER24.jpg" alt="Product 1">
+                <h3>GERMANY EURO 2024</h3>
+                <p>$100</p>
+            </div>
+            <div class="product">
+                <img src="../static/ENG24.jpg" alt="Product 2">
+                <h3>ENGLAND EURO 2024</h3>
+                <p>$100</p>
+            </div>
+            <div class="product">
+                <img src="../static/FRA24.jpg" alt="Product 3">
+                <h3>FRANCE EURO 2024</h3>
+                <p>$100</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Jersey Store</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body class="store-background">
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+            <div class="col">
+                <div class="card">
+                    <img src="{{ url_for('static', filename=product.file) }}" class="card-img-top" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.price }}</p>
+                        <a href="/detail/{{ product.id }}" class="btn btn-warning">Details</a>
+                        <a href="/delete/{{ product.id }}" class="btn btn-danger">Delete product</a>
+                        <a href="/edit/{{ product.id }}" class="btn btn-primary">Edit product</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
